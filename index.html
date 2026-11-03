@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Week of School</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- SIDEBAR BORDER DI KIRI -->
+        <aside class="sidebar-left">
+            <div class="game-logo">
+                <h1>The Last Week<br><span>of School</span></h1>
+            </div>
+
+            <div class="menu-buttons">
+                <button id="btn-newgame" class="vn-btn">New Game</button>
+                <button id="btn-continue" class="vn-btn">Continue</button>
+                <button id="btn-about" class="vn-btn">About</button>
+                <!-- TOMBOL EXIT SUDAH DIGANTI JADI CREDITS -->
+                <button id="btn-credits" class="vn-btn">Credits</button>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="footer-divider">✦ ─── ❖ ─── ✦</div>
+                <div class="user-status-card">
+                    <span class="user-icon">🎮</span>
+                    <span id="sidebar-user-name">Guest Mode</span>
+                </div>
+                <div class="game-version">Ver. 1.0.0 • X RPL 2</div>
+            </div>
+        </aside>
+
+        <!-- AREA BACKGROUND / ARTWORK -->
+        <main class="main-art-area">
+            <div class="bg-overlay"></div>
+            
+            <div class="top-widgets">
+                <button id="fullscreen-btn" class="icon-btn" title="Toggle Fullscreen">
+                    ⛶ Fullscreen
+                </button>
+                <button id="account-btn" class="icon-btn">
+                    👤 <span id="account-status">Akun</span>
+                </button>
+            </div>
+        </main>
+
+        <!-- MODAL AUTHENTICATION (LOGIN / REGIS / PROFIL) -->
+        <div id="auth-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="close-auth">&times;</span>
+                
+                <div id="login-form">
+                    <h2>Login Akun</h2>
+                    <input type="text" id="login-username" placeholder="Username" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button id="do-login-btn" class="modal-btn">Masuk</button>
+                    <p>Belum punya akun? <a href="#" id="switch-to-regis">Daftar di sini</a></p>
+                </div>
+
+                <div id="regis-form" class="hidden">
+                    <h2>Daftar Akun Baru</h2>
+                    <input type="text" id="regis-username" placeholder="Username Baru" required>
+                    <input type="password" id="regis-password" placeholder="Password Baru" required>
+                    <button id="do-regis-btn" class="modal-btn">Daftar</button>
+                    <p>Sudah punya akun? <a href="#" id="switch-to-login">Login di sini</a></p>
+                </div>
+
+                <div id="user-logged-info" class="hidden">
+                    <h2>Profil Pemain</h2>
+                    <p>Selamat datang, <strong id="logged-user-name">User</strong>!</p>
+                    <button id="do-logout-btn" class="modal-btn logout-color">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL ABOUT -->
+        <div id="about-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="close-about">&times;</span>
+                <h2>About Game</h2>
+                <p><strong>The Last Week of School</strong></p>
+                <p>Proyek 3 Gim Berbasis Web - Kelompok 6 RPL 2</p>
+                <p>Simulasi manajemen acara Class Meeting berbasis Visual Novel.</p>
+            </div>
+        </div>
+
+        <!-- MODAL CREDITS (TAMPILAN TIM KELOMPOK 6) -->
+        <div id="credits-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="close-credits">&times;</span>
+                <h2>Credits Proyek</h2>
+                <p><strong style="color: #ffd54f;">THE LAST WEEK OF SCHOOL</strong></p>
+                <p style="font-size:0.9rem; color:#aaa;">Kelompok 6 — Class X RPL 2</p>
+                <hr style="border-color:#444; margin:12px 0;">
+                <p style="text-align:left; margin-left:20px;"><strong>Tim Pengembang:</strong></p>
+                <ul style="text-align:left; margin-left:40px; color:#ffd54f; line-height:1.8;">
+                    <li>• Radithya</li>
+                    <li>• Diky</li>
+                    <li>• Azka</li>
+                    <li>• Almira</li>
+                    <li>• Kayla</li>
+                    <li>• Ajam</li>
+                </ul>
+                <p style="font-size:0.8rem; color:#888; margin-top:15px;"><i>"Kepakkan Sayap, Taklukkan Masa Depan!"</i></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

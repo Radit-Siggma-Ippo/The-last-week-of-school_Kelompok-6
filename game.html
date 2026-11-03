@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Week of School — Gameplay</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <div id="game-container" class="game-container">
+        
+        <!-- HUD BAR ATAS -->
+        <div class="hud-top">
+            <button id="btn-back-menu" class="hud-btn">🏠 Menu</button>
+            <div id="hud-chapter" class="hud-title">Prolog — The Last Week of School</div>
+            <div class="hud-right-group" style="display: flex; gap: 8px;">
+                <button id="btn-history" class="hud-btn">📜 History</button>
+                <button id="btn-menu-opt" class="hud-btn">⚙️ Option</button>
+            </div>
+        </div>
+
+        <!-- OVERLAY TITLE INTRO BAB -->
+        <div id="chapter-screen" class="chapter-screen">
+            <div class="chapter-content">
+                <h2 id="chapter-bab-label" class="intro-element hidden-step">PROLOG</h2>
+                <h1 id="chapter-title" class="intro-element hidden-step">Riuh Koridor dan Langkah Menuju Gelap</h1>
+                <p id="chapter-quote" class="intro-element step-quote hidden-step">
+                    「Tinta ujian telah mengering di atas kertas, hiruk pikuk sekolah menyisakan riuh tawa di sepanjang koridor. Namun di balik keceriaan akhir semester, ada gerak sunyi yang sedang menyiapkan pekan perpisahan.」
+                </p>
+                <p id="chapter-author" class="intro-element step-quote hidden-step">── Vera</p>
+            </div>
+        </div>
+
+        <!-- CHARACTER SPRITES (diisi otomatis oleh game.js sesuai pembicara) -->
+        <div id="sprite-stage" class="sprite-stage"></div>
+
+        <!-- BUBBLE JAWABAN PILIHAN -->
+        <div id="reaction-bubble" class="reaction-bubble hidden"></div>
+
+        <!-- DIALOGUE BOX UTAMA -->
+        <div class="dialogue-box">
+            <div id="speaker-badge" class="speaker-badge">Narrator</div>
+            <div id="dialogue-text" class="dialogue-text">Memuat cerita...</div>
+            <button id="btn-next" class="btn-next">Lanjut ➔</button>
+        </div>
+
+        <!-- CHOICES OVERLAY -->
+        <div id="choices-overlay" class="choices-overlay hidden">
+            <div id="choices-container" class="choices-container"></div>
+        </div>
+
+    </div>
+
+    <!-- MODAL OPTION (UNTUK SAVE SUPAYA GAK NONGOL TERUS) -->
+    <div id="option-modal" class="history-modal hidden">
+        <div class="history-content" style="max-width: 350px; text-align: center; height: auto;">
+            <div class="history-header">
+                <h3>⚙️ Opsi Permainan</h3>
+                <button id="btn-close-option" class="close-btn">&times;</button>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+                <button id="btn-save" class="hud-btn" style="padding: 10px;">💾 Save Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL LOG PERCAKAPAN (HISTORY) -->
+    <div id="history-modal" class="history-modal hidden">
+        <div class="history-content">
+            <div class="history-header">
+                <h3>📜 Rekam Percakapan</h3>
+                <button id="btn-close-history" class="close-btn">&times;</button>
+            </div>
+            <div id="history-log-container" class="history-log-container"></div>
+        </div>
+    </div>
+
+    <!-- OVERLAY MINIGAME INTERAKTIF -->
+    <div id="minigame-overlay" class="minigame-overlay hidden">
+        <div class="minigame-card">
+            <h3 id="minigame-title">🎮 MINIGAME PERSIAPAN</h3>
+            <p id="minigame-desc">Petunjuk minigame akan muncul di sini...</p>
+            <div id="minigame-action-area" class="minigame-action-area"></div>
+            <button id="btn-minigame-submit" class="minigame-btn hidden">SELESAI</button>
+        </div>
+    </div>
+
+    <script src="js/minigames.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
